@@ -1,0 +1,95 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <SolidColorBrush x:Key="Text.Title" Color="#FFFF52E2" />
+    <SolidColorBrush x:Key="Text.TitleBackground" Color="#202020" />
+    <SolidColorBrush x:Key="Text.Subtitle" Color="#FFFF88EB" />
+    <SolidColorBrush x:Key="Text.SubtitleBackground" Color="#202020" />
+    <SolidColorBrush x:Key="Panel.TopBackground" Color="#202020" />
+    <SolidColorBrush x:Key="Panel.BottomBackground" Color="#000000" />
+
+    <SolidColorBrush x:Key="DarkSquareColor" Color="#18FFFFFF" />
+    <SolidColorBrush x:Key="LightSquareColor" Color="#34FFFFFF" />
+
+    <DrawingBrush x:Key="DarkCheckered" Viewport="0,0,20,20" ViewportUnits="Absolute" Stretch="None" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="{DynamicResource DarkSquareColor}">
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <RectangleGeometry Rect="0,0,10,10"/>
+                            <RectangleGeometry Rect="10,10,10,10"/>
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="{DynamicResource LightSquareColor}">
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <RectangleGeometry Rect="10,0,10,10"/>
+                            <RectangleGeometry Rect="0,10,10,10"/>
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <LinearGradientBrush x:Key="GradientBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#C4000000" Offset="0"/>
+        <GradientStop Color="#C52C2C2C" Offset="1"/>
+        <GradientStop Color="#C52A2A2F" Offset="0.531"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="TitleTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource Text.Title}" />
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="FontFamily" Value="/Content/#Crud Regular" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="SubtitleTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource Text.Subtitle}" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontFamily" Value="Segoe" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+
+    <Style x:Key="ButtonTextStyle" TargetType="{x:Type telerik:RadButton}">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontFamily" Value="/Content/#crud" />
+        <Setter Property="FontWeight" Value="Normal" />
+    </Style>
+
+    <Style x:Key="TimeTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="FontFamily" Value="/Content/#crud" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="Red" />
+    </Style>
+
+    <DataTemplate x:Key="Ninja">
+        <Image Source="/Content/Ninja.png" Stretch="None">
+            <Image.RenderTransform>
+                <SkewTransform  />
+            </Image.RenderTransform>
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard Name="NinjaMeltX">
+                        <Storyboard TargetProperty="RenderTransform.AngleX" AutoReverse="True" RepeatBehavior="Forever">
+                            <DoubleAnimation From="0" To="20" Duration="0:0:15" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard Name="NinjaMeltY">
+                        <Storyboard TargetProperty="RenderTransform.AngleY" AutoReverse="True" RepeatBehavior="Forever">
+                            <DoubleAnimation From="0" To="20" Duration="0:0:15" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+    </DataTemplate>
+    
+</ResourceDictionary>
