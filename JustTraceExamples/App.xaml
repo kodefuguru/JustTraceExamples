@@ -5,7 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/JustTraceExample;component/Resources.xaml" />
+                <ResourceDictionary Source="/JustTraceExamples;component/Resources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         </Application.Resources>
