@@ -16,11 +16,6 @@
             return new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.None, 16 * 1024 * 1024);
         }
 
-        public async Task<Dictionary<int, int>> CountEventsAsync(string filename)
-        {
-            return await Task.Run(() => CountEvents(filename));
-        }
-
         public Dictionary<int, int> CountEvents(string filename)
         {
             using (var reader = new StreamReader(OpenFile(filename)))

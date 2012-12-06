@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustTraceExamples", "JustTraceExamples\JustTraceExamples.csproj", "{35560C5E-C8F3-4CD5-8DFB-640B1B1C854A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustTraceExamples.Optimized", "JustTraceExamples.Optimized\JustTraceExamples.Optimized.csproj", "{924400DE-3233-426E-ADB4-481EDB828CAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{35560C5E-C8F3-4CD5-8DFB-640B1B1C854A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35560C5E-C8F3-4CD5-8DFB-640B1B1C854A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35560C5E-C8F3-4CD5-8DFB-640B1B1C854A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924400DE-3233-426E-ADB4-481EDB828CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924400DE-3233-426E-ADB4-481EDB828CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924400DE-3233-426E-ADB4-481EDB828CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924400DE-3233-426E-ADB4-481EDB828CAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

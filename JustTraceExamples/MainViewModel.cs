@@ -25,12 +25,12 @@
             get { return this.events; }
         }
 
-        public async void LoadEvents()
+        public void LoadEvents()
         {
             this.Busy = true;
             try
             {
-                var dictionary = await new EventParser().CountEventsAsync("reallybigfile.xml");
+                var dictionary = new EventParser().CountEvents("reallybigfile.xml");
 
                 this.events.Clear();
 
